@@ -1,0 +1,363 @@
+﻿<!doctype html>
+<html amp="">
+<head>
+  <title>USSD (Unstructured Supplementary Service Data)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <link rel="canonical" href="ussd-unstructured-supplementary-service-data.html">
+  <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <style amp-custom="">/* @group type scale */
+
+body {
+  font-size: 1em;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+p, ul, ol, blockquote {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+
+blockquote {
+  font-style: italic;
+  color: #888;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.414em;
+  border-left: 1px solid #eee;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: #111;
+}
+
+h1 {
+  font-size: 2.074em;
+}
+
+h2 {
+  font-size: 1.728em;
+}
+
+h3 {
+  font-size: 1.44em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+blockquote,
+.amp-article-quote-block-source,
+.amp-article-original-source {
+  font-size: 0.833em;
+}
+
+.amp-article-image-caption p,
+.amp-article-video-caption p,
+.amp-article-audio-caption p,
+.amp-article-pubdate,
+.amp-article-author-name {
+  font-size: 0.694em;
+  letter-spacing: 0;
+}
+
+.tiny-font {
+  font-size: 0.579em;
+}
+
+/* @group end */
+
+/* @group general */
+
+body {
+  background: #f2f2f2;
+  font-family: "Avenir Next", Avenir, Roboto, "Segoe WP", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.0125em;
+  line-height: 1.45;
+  color: #666;
+}
+
+.website {
+  width: 100vw;
+  max-width: 768px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.website-header {
+  background: #111;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2vh 4vw;
+  box-sizing: border-box;
+  max-height: 12vh;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 0.833em;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f7f7f7;
+}
+
+.site-title a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.amp-view-original {
+  font-size: 0.579em;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: right;
+  white-space: nowrap;
+  color: #666;
+}
+
+.amp-view-original a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* @group end */
+
+/* @group amp article */
+
+.amp-article-content {
+  padding-bottom: 4vh;
+  box-sizing: border-box;
+}
+
+.amp-article-main-image {
+  max-width: 100%;
+}
+
+.amp-article-header {
+  margin-top: 4vh;
+}
+
+.amp-article-header,
+.amp-article-footer,
+.amp-article-html-block,
+.amp-article-markdown-block,
+.amp-article-image-caption,
+.amp-article-video-caption,
+.amp-article-quote-block,
+.amp-article-audio-block,
+.amp-article-embed-block.twitter-tweet {
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.amp-article-title {
+  letter-spacing: -0.0325em;
+}
+
+.amp-article-image-block,
+.amp-article-video-block {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.amp-article-pubdate,
+.amp-article-author-name,
+.amp-article-image-caption,
+.amp-article-video-caption,
+.amp-article-audio-caption,
+.amp-article-quote-block-source {
+  color: #999;
+}
+
+.amp-article-pubdate,
+.amp-article-author-name {
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.amp-article-pubdate + .amp-article-author-name:before,
+.amp-article-audio-title + .amp-article-audio-author:before {
+  content: ' by ';
+}
+
+.amp-article-audio-title {
+  font-style: italic;
+}
+
+.amp-article-quote-block {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+
+.amp-article-quote-block-text {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.2;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  border-left-width: 0px;
+}
+
+.amp-article-quote-block-source {
+  margin-top: 0.833em;
+  display: block;
+}
+
+.amp-article-audio-caption p {
+  margin-top: 0.5em;
+  display: block;
+}
+
+amp-img {
+  background-color: #f7f7f7;
+  max-width: 100%;
+}
+
+.amp-article-hr-block {
+  height: 1px;
+  border: none;
+  margin: 2.6em 0;
+  color: #eee;
+  background-color: #eee;
+}
+
+.amp-article-placeholder-block {
+  background-color: rgba(0, 0, 0, 0.02);
+  margin: 1.45em;
+  padding: 1.45em;
+  text-align: center;
+}
+
+/* @group end */
+</style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "USSD (Unstructured Supplementary Service Data)",
+      "mainEntityOfPage": "https://www.simbase.com",
+      "description": "The Unstructured Supplementary Service Data, or USSD Code service that banks and other financial service providers use to service the banking community from their platforms.",
+      "url": "https://www.simbase.com/iot-glossary-dictionary/ussd-unstructured-supplementary-service-data",
+      "author": {
+        "@type": "Person",
+        "name": "Roel van der Meer"
+      },
+      "publisher": {
+        "@type": "Organization",
+        
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/c54fd3bb-d3bf-4c98-8223-0b86d479d84d/simbase-complete+logo.png",
+          "width": 4033,
+          "height": 915
+        },
+        
+        "name": "Simbase"
+      },
+      
+      "datePublished": "2022-05-10",
+      "dateModified": "2023-09-22"
+    }
+  </script>
+  <script async="" src="../v0.js"></script>
+  
+</head>
+<body>
+  <div id="page" class="website">
+
+    <header class="website-header">
+      <h1 class="site-title"><a href="../index.htm" target="_blank">Simbase</a></h1>
+      <small class="amp-view-original"><a href="ussd-unstructured-supplementary-service-data.html" target="_blank">View Original</a></small>
+    </header>
+
+    <article id="content" class="amp-article-content">
+      
+
+      <header class="amp-article-header">
+        <h1 class="amp-article-title">USSD (Unstructured Supplementary Service Data)</h1>
+        <div class="amp-article-meta">
+          <time class="amp-article-pubdate" datetime="2022-05-10">
+            May 10, 2022
+          </time>
+          <small class="amp-article-author-name">Roel van der Meer</small>
+        </div>
+      </header>
+
+      
+
+
+
+<div class="amp-article-html-block"><h3>Ready to replace USSD?</h3>
+<p class="">There’s no doubt that telecommunications companies have withdrawn the Unstructured Supplementary Service Data, or USSD Code service that banks and other financial service providers use to service the banking community from their platforms.</p>
+<p class="">In recent studies, it has been discovered that sending a survey through SMS was considerably easier and provided a better user experience than sending one using USSD messaging.</p>
+<p class="">Despite expectations from various financial services professionals that app-powered mobile banking would eventually replace USSD messaging, it remains the most commonly used and successfully integrated mobile technology in growing economies.</p>
+<h3>What is USSD?</h3>
+<p class="">Unstructured Supplementary Service Data (USSD) is a term that refers to data that is not structured. It may appear complex at first and can rapidly become technical, but there are two crucial concepts to grasp for financial inclusion.&nbsp;</p>
+<p class="">To begin with, you're using USSD when you dial a number that begins with * and ends with #. Second, for delivering mobile financial services to low-income customers.&nbsp;</p>
+<p class="">USSD messaging is a communications protocol based on the Global System for Mobile Communications that is also known as &quot;Feature Codes&quot; or &quot;Quick Codes&quot; in cellular networks (GSM).</p>
+<p class="">A simple USSD code can be dialed to produce a query when a mobile user has access to USSD. The user can then view and access various services using this menu-driven interface. Responses are returned in a simple text-based format when a request has been sent, allowing for rapid and easy access to information.</p>
+<p class="">A network entity, such as the Mobile Switching Center (MSC), Short Message Service Center (SMSC), or Home Location Register, sends or receives USSD messages (HLR). A device, such as a mobile phone or an IoT endpoint, could be on the other end of the connection.&nbsp;</p>
+<p class="">Although USSD allows direct communication between the device and the network, the message is limited to only 182 characters or 16 bits of data.&nbsp;</p>
+<p class="">If your computer has a 2G or 3G modem, you can use the USSD code to communicate with it. It is popular in rural areas because the data is a supplement to conventional data plans and works over a much broader range.</p>
+<h3>USSD message format</h3>
+<p class="">Depending on their origin, USSD signals are classified as one of two types:&nbsp;</p>
+<ul data-rte-list="default">
+ <li><p class="">A USSD Pull is a user-initiated request in the form of an MMI command.</p></li>
+ <li><p class="">A USSD Push is a message from the operator that appears on the screen of the user.</p></li>
+</ul>
+<p class="">A USSD message can be used to transmit a request to the operator. The * and # characters, as well as numeric codes, make up commands. The chain normally starts with * or # (which can appear many times, separating commands from subcommands) and ends with #. A USSD message can be up to 182 characters long, however, even the most lengthy requests rarely exceed 20. *225# and #225# are two USSD commands that AT&amp;T and T-Mobile consumers can use to inquire about their balances.&nbsp;</p>
+<p class="">These codes are written and sent over the normal interface for calls on mobile devices.</p>
+<p class="">In response to a user request, the operator's USSD service can either execute the command (for example, enable or stop a service) or transmit a message to the subscriber's device's screen. Messages of this type are frequently lengthier than USSD orders, however, they are limited to 182 characters. Operators frequently send an SMS text message instead of a USSD response.&nbsp;</p>
+<p class="">USSD messages can be used for a variety of things, including:&nbsp;</p>
+<ul data-rte-list="default">
+ <li><p class="">Connecting/disconnecting services, transferring to a different payment plan, and so forth.&nbsp;</p></li>
+ <li><p class="">Receiving background information such as account status, new services, and terms of service, among other things.&nbsp;</p></li>
+ <li><p class="">Managing SIM cards, such as changing PIN/PUK codes and so on.&nbsp;</p></li>
+ <li><p class="">Receiving background information in the subscriber's region, such as the time, weather, and so on.</p></li>
+</ul>
+<h3>Disadvantages of USSD</h3>
+<p class="">While unstructured supplementary service data (USSD) has a lot of advantages for IoT makers, it also has a lot of drawbacks. You should think about these inherent disadvantages of USSD before committing to using USSD messaging.</p>
+<p class=""><strong>Data throughput is limited</strong></p>
+<p class="">With 16-bit data limitations, it's no surprise that accessing unstructured supplementary service data (USSD) doesn't result in data charges: it uses so little data! Even if 16-bit, 182-character transfers are sufficient for your application, keep in mind that USSD messaging isn't suited for things like distributing OTA updates to your device. And if your device records any voice, video, or photographs, it won't be able to send them over the USSD code.</p>
+<p class=""><strong>No Longer Fit for the Future</strong></p>
+<p class="">GSM networks have been in use for many years. While there are still plenty of ways to use them for the Internet of Things, cellular operators around the world are in the process of retiring their 2G and even 3G networks to make room for more advanced technology. The 2G coverage map will continue to shrink over the next few years, and there will be fewer nations where you can use GSM technology like unstructured supplementary service data.</p>
+<p class=""><strong>Usage Restrictions&nbsp;</strong></p>
+<p class="">If mobile network operators (MNOs) are concerned about network congestion or have other reasons to keep this capacity to themselves, they may restrict access to USSD services.</p>
+<p class=""><strong>An Unfamiliar User Interface&nbsp;</strong></p>
+<p class="">Many mobile users around the world are familiar with the USSD interface, but in the United States, it may seem like a throwback to the 1990s. This might not be an issue if you're using the technology to connect with unmanned IoT devices in the field, but it’s worth thinking about if your device is aimed at consumers.</p>
+<h3>What you should use instead of USSD?</h3>
+<p class="">USSD allows users to select and browse among a variety of alternatives; it is also accessible and familiar, although it is limited by timeouts and may not be commercially viable in some countries. You can use alternatives instead of unstructured supplementary service data (USSD).&nbsp;</p>
+<p class=""><strong>SMS</strong></p>
+<p class="">SMS messages can be used to send one-way &quot;push&quot; notifications to subscribers, such as alerts, news, offers, and other information from content providers.&nbsp;</p>
+<p class="">Furthermore, because SMS may transport binary data, it can be used as a wireless delivery channel for ringtones, operator logos, and encrypted messages.</p>
+<p class=""><strong>STK</strong></p>
+<p class="">Developers can create an application that is saved on the Subscriber Identity Module (SIM) card and displayed in the top-level menu of a feature phone using the SIM Toolkit (STK).&nbsp;</p>
+<p class="">STK enables these apps to communicate with external applications, seek and receive information from SIM, issue commands to the mobile device, and ask for user input.</p>
+<p class=""><strong>Data&nbsp;</strong></p>
+<p class="">Last but not least. A great way to be ready for future deployments is to switch to IP based communication. Leveraging the affortable and reliable cellular network is an excellent replacement option.</p></div>
+
+
+      <footer class="amp-article-footer">
+        <p class="amp-article-original-source">
+          Discover more from <a href="../iot-glossary-dictionary-1.html" target="_blank"><em>Simbase</em></a>
+        </p>
+      </footer>
+
+    </article>
+  </div>
+</body>
+</html>

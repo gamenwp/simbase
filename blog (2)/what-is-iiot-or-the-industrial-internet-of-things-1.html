@@ -1,0 +1,352 @@
+﻿<!doctype html>
+<html amp="">
+<head>
+  <title>What is IIoT, or the Industrial Internet of Things?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <link rel="canonical" href="what-is-iiot-or-the-industrial-internet-of-things.html">
+  <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <style amp-custom="">/* @group type scale */
+
+body {
+  font-size: 1em;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+p, ul, ol, blockquote {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+
+blockquote {
+  font-style: italic;
+  color: #888;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.414em;
+  border-left: 1px solid #eee;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: #111;
+}
+
+h1 {
+  font-size: 2.074em;
+}
+
+h2 {
+  font-size: 1.728em;
+}
+
+h3 {
+  font-size: 1.44em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+blockquote,
+.amp-article-quote-block-source,
+.amp-article-original-source {
+  font-size: 0.833em;
+}
+
+.amp-article-image-caption p,
+.amp-article-video-caption p,
+.amp-article-audio-caption p,
+.amp-article-pubdate,
+.amp-article-author-name {
+  font-size: 0.694em;
+  letter-spacing: 0;
+}
+
+.tiny-font {
+  font-size: 0.579em;
+}
+
+/* @group end */
+
+/* @group general */
+
+body {
+  background: #f2f2f2;
+  font-family: "Avenir Next", Avenir, Roboto, "Segoe WP", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.0125em;
+  line-height: 1.45;
+  color: #666;
+}
+
+.website {
+  width: 100vw;
+  max-width: 768px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.website-header {
+  background: #111;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2vh 4vw;
+  box-sizing: border-box;
+  max-height: 12vh;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 0.833em;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f7f7f7;
+}
+
+.site-title a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.amp-view-original {
+  font-size: 0.579em;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: right;
+  white-space: nowrap;
+  color: #666;
+}
+
+.amp-view-original a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* @group end */
+
+/* @group amp article */
+
+.amp-article-content {
+  padding-bottom: 4vh;
+  box-sizing: border-box;
+}
+
+.amp-article-main-image {
+  max-width: 100%;
+}
+
+.amp-article-header {
+  margin-top: 4vh;
+}
+
+.amp-article-header,
+.amp-article-footer,
+.amp-article-html-block,
+.amp-article-markdown-block,
+.amp-article-image-caption,
+.amp-article-video-caption,
+.amp-article-quote-block,
+.amp-article-audio-block,
+.amp-article-embed-block.twitter-tweet {
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.amp-article-title {
+  letter-spacing: -0.0325em;
+}
+
+.amp-article-image-block,
+.amp-article-video-block {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.amp-article-pubdate,
+.amp-article-author-name,
+.amp-article-image-caption,
+.amp-article-video-caption,
+.amp-article-audio-caption,
+.amp-article-quote-block-source {
+  color: #999;
+}
+
+.amp-article-pubdate,
+.amp-article-author-name {
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.amp-article-pubdate + .amp-article-author-name:before,
+.amp-article-audio-title + .amp-article-audio-author:before {
+  content: ' by ';
+}
+
+.amp-article-audio-title {
+  font-style: italic;
+}
+
+.amp-article-quote-block {
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
+}
+
+.amp-article-quote-block-text {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.2;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  border-left-width: 0px;
+}
+
+.amp-article-quote-block-source {
+  margin-top: 0.833em;
+  display: block;
+}
+
+.amp-article-audio-caption p {
+  margin-top: 0.5em;
+  display: block;
+}
+
+amp-img {
+  background-color: #f7f7f7;
+  max-width: 100%;
+}
+
+.amp-article-hr-block {
+  height: 1px;
+  border: none;
+  margin: 2.6em 0;
+  color: #eee;
+  background-color: #eee;
+}
+
+.amp-article-placeholder-block {
+  background-color: rgba(0, 0, 0, 0.02);
+  margin: 1.45em;
+  padding: 1.45em;
+  text-align: center;
+}
+
+/* @group end */
+</style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "What is IIoT, or the Industrial Internet of Things?",
+      "mainEntityOfPage": "https://www.simbase.com",
+      
+      "url": "https://www.simbase.com/blog/what-is-iiot-or-the-industrial-internet-of-things",
+      "author": {
+        "@type": "Person",
+        "name": "Roel van der Meer"
+      },
+      "publisher": {
+        "@type": "Organization",
+        
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/c54fd3bb-d3bf-4c98-8223-0b86d479d84d/simbase-complete+logo.png",
+          "width": 4033,
+          "height": 915
+        },
+        
+        "name": "Simbase"
+      },
+      
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=750w",
+        "width": 2500,
+        "height": 1667
+      },
+      
+      "datePublished": "2022-02-09",
+      "dateModified": "2023-09-22"
+    }
+  </script>
+  <script async="" src="../v0-1.js"></script>
+  
+</head>
+<body>
+  <div id="page" class="website">
+
+    <header class="website-header">
+      <h1 class="site-title"><a href="../index-2.htm" target="_blank">Simbase</a></h1>
+      <small class="amp-view-original"><a href="what-is-iiot-or-the-industrial-internet-of-things.html" target="_blank">View Original</a></small>
+    </header>
+
+    <article id="content" class="amp-article-content">
+      
+        <amp-img class="amp-article-main-image" layout="responsive" width="2500" height="1667" src="../content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns-11.jpg?format=500w" srcset="https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=2500w 2500w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=1500w 1500w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=1000w 1000w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=750w 750w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=500w 500w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=300w 300w,
+          https://images.squarespace-cdn.com/content/v1/6267c7fbad6356776aa08e6d/1651576988617-ZRJVOB87LCJN8VQID18X/unsplash-image-jHZ70nRk7Ns.jpg?format=100w 100w" sizes="100vw">
+        </amp-img>
+      
+
+      <header class="amp-article-header">
+        <h1 class="amp-article-title">What is IIoT, or the Industrial Internet of Things?</h1>
+        <div class="amp-article-meta">
+          <time class="amp-article-pubdate" datetime="2022-02-09">
+            February  9, 2022
+          </time>
+          <small class="amp-article-author-name">Roel van der Meer</small>
+        </div>
+      </header>
+
+      
+
+
+
+<div class="amp-article-html-block"><p class="">Industrial Internet of Things (IIOT)</p>
+<p class="">In the current scenario, the world is becoming more and more connected. With the use of new technologies like machine learning and AI, we can make this process even faster and easier. One effective way to do so is with an Industrial Internet of Things (IIoT).&nbsp;</p>
+<h3>What is the Industrial Internet of Things?</h3>
+<p class="">Industrial Internet of Things (IIoT) refers to the integration of Operational Technology (OT) with Information Technology (IT). IIOT is also referred to as the Industrial Internet. It's a term that describes how new technologies are connecting industries with machines, data, and people in order to create new opportunities for efficiency and growth. The Industrial Internet of Things is a concept where factories, warehouses, and supply chains are digitally connected to one another. Data from these devices is then sent over the internet to be processed and analyzed. This helps organizations to improve processes, reduce waste, and create more innovative products.</p>
+<h2>The Difference Between IIoT and IoT</h2>
+<p class="">The Industrial Internet of Things (IIoT) is the extension of the Internet to the industrial space. The result is an automated, data-driven system that can monitor everything from machinery to operations to energy usage. IIoT doesn't just monitor, it also optimizes manufacturing processes and makes them smarter by providing information about what's happening right now. The result is an automatic control system that can be used in numerous industries such as manufacturing, retailing, construction, etc.</p>
+<p class="">For example, you might have a process that requires constant monitoring and reporting to ensure it continues to run efficiently. You could use the Automatic Control System to send out periodic reports on the status of your process and make changes in real-time.</p>
+<h3>Advantages of IIOT</h3>
+<p class="">With IIoT, users are able to make smarter decisions about their machinery. For example, manufacturers of wind turbines can monitor data like wind speed and electrical output of the turbine, improving processes at their factories and saving money.</p>
+<p class="">The benefits of this technology are as follows:</p>
+<p class="">- Increased visibility into manufacturing processes</p>
+<p class="">- Improved reliability by providing early warnings on potential failures</p>
+<p class="">- Optimized maintenance schedules</p>
+<p class="">- Reduced human error from manual data entry or calculations</p>
+<h3>IIoT Future</h3>
+<p class="">The future IIoT environment will be composed of the following three tiers:</p>
+<p class="">Tier 1 - Process data from production equipment using sensors, machine-to-machine communications networks, and data analytics to generate operational insights.</p>
+<p class="">Tier 2 - Integrate these insights into enterprise IT systems that provide decision-support services for key business functions such as sales forecasting or inventory management.</p>
+<p class="">Tier 3 - Incorporate predictive analytics into production operations with technologies that automate control processes without manual intervention.</p>
+<h3>IIoT is just starting</h3>
+<p class="">With the NB-IoT and LTE-M technologies still rolling out in different countries, IIoT and IoT, in general, are just starting to gain traction and it will inevitably be used more frequently. As automation becomes more technologically advanced, any data that would be required to collect manually will be done using IoT devices. This, in turn, will allow manufacturers and other companies to collect a lot of data which will allow them to improve their product quality and costs. Because of this, it will be beneficial for everyone involved - from consumers to manufacturers.</p></div>
+
+
+      <footer class="amp-article-footer">
+        <p class="amp-article-original-source">
+          Discover more from <a href="../blog-2.html" target="_blank"><em>Simbase</em></a>
+        </p>
+      </footer>
+
+    </article>
+  </div>
+</body>
+</html>
